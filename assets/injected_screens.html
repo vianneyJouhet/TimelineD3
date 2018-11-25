@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Injected Screen for the TimelineD3 Plugin</title>
+    </head>
+
+    <body>
+        <div id="timelineD3-mainDiv">
+            
+            <div id="timelineD3-dropTarget">
+            </div>
+
+            <div class="timelineD3-mainContent">
+                <div class="timelineD3-mainContentPad">
+                    <p>
+                      ENTER a Patient ID below or DROP a Patient Set, and DROP one (or more) Panel(s) Concept ANYWHERE HERE, and let the magic happen.
+                    </p>
+
+                    <div id="timelineD3-displayPatientSetDropped" class="displayContentDropped">
+                        <h3>Patient set or Patient ID</h3>
+                        <p>No patient set dropped yet.</p>
+                        <label>#</label><input type="text" placeholder="Enter an ID..." class="timelineD3-inputPatientId" id="timelineD3-inputPatientId" onkeyup="i2b2.TimelineD3.patientIdTyped();">
+                    </div>
+
+                    <div id="timelineD3-displayPanelConceptDropped" class="displayContentDropped">
+                      <h3>Panels Concepts</h3>
+                      <div>No panel concept dropped yet.</div>
+                    </div>
+
+                    <div id="timelineD3-mainSettings">
+                      <i class="fa fa-cogs fa-2x openSettings" aria-hidden="true" onclick="i2b2.TimelineD3.displaySettings();"></i>
+                      <div id="lightboxSettings">
+                        <i class="fa fa-window-close crossClose" aria-hidden="true" onclick="i2b2.TimelineD3.closeSettings();"></i>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="results-working" style="display:none;">
+                     <!-- <div class="computer-waiting"></div> -->
+                     <i class="fa fa-cog fa-4x fa-spin" aria-hidden="true"></i>
+                     <h2>Wait a minute.</h2>
+                     <div class="progress-bar" id="progress-bar">
+                       <div id="progressing" class="progressing"></div>
+                     </div>
+                     <div id="progress-informations"></div>
+                </div>
+                
+                <div class="results-finished" style="display:none;">
+                    <div id="timelineD3-infoPDO">
+                        <nav>
+                            <button type="button" onclick="i2b2.TimelineD3.pgGo(-1);" class="pgGo-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous patient</button>
+                            <input type="text" id="timelineD3-pgstart" value="1" class="pgGo-input">
+                            <!--size: <input type="text" id="timelineD3-pgsize" style="width:40px;" value="1"> -->
+                            <button type="button" onclick="i2b2.TimelineD3.pgGo(0);" class="pgGo-btn">Go</button>
+                            <button type="button" onclick="i2b2.TimelineD3.pgGo(1);" class="pgGo-btn">Next patient <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        </nav>
+                        <div id="timelineD3-graph"></div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </body>
+</html>
