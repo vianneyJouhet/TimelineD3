@@ -1,5 +1,6 @@
 # TimelineD3
 TimelineD3-i2b2plugin
+
 This project is a D3.js based Timeline plugin for visualizing patient data within the i2b2 webclient.
 
 # Installation
