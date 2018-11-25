@@ -1,7 +1,11 @@
 # TimelineD3
 TimelineD3-i2b2plugin
+This project is a D3.js based Timeline plugin for visualizing patient data within the i2b2 webclient.
 
 # Installation
+
+Please visit https://community.i2b2.org/wiki/display/webclient/Web+Client+Plug-in+Developers+Guide for more information about i2b2 webclient plugins deployments
+
 Create a “chubdx” directory in the plugin directory
 ```bash
 webclient/js-i2b2/cells/plugins.
